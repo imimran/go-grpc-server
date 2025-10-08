@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package fileservice;
+
+// Full module path for Go
+option go_package = "github.com/imimran/go-grpc-server/fileservice;fileservice";
+
+service ImageService {
+  rpc UploadImage (ImageRequest) returns (ImageResponse);
+}
+
+message ImageRequest {
+  string filename = 1;
+  bytes data = 2;
+  string user_id = 3;
+  string meta = 4;
+}
+
+message ImageResponse {
+  bool success = 1;
+  string message = 2;
+}
