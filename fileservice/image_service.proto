@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package fileservice;
 
-// Full module path (Go modules compatible)
 option go_package = "github.com/imimran/go-grpc-server/fileservice;fileservice";
 
 service ImageService {
